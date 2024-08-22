@@ -1,0 +1,20 @@
+{
+  "name": "ppiatividade",
+  "version": "1.0.0",
+  "description": "PPI ATIVIDADE ",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ThiagoMrksz/PPIATIVIDADE.git"
+  },
+  "author": "Thiago Marques",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ThiagoMrksz/PPIATIVIDADE/issues"
+  },
+  "homepage": "https://github.com/ThiagoMrksz/PPIATIVIDADE#readme"
+}
