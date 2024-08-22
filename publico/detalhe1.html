@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalhes do Evento</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .section {
+            margin-bottom: 20px;
+        }
+        .total {
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #28a745;
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .btn:hover {
+            background-color: #218838;
+        }
+    </style>
+    <script>
+        function updateTotal() {
+            const ticketPrice = 100; // Valor do ingresso
+            const quantity = document.getElementById('quantity').value;
+            const total = ticketPrice * quantity;
+            document.getElementById('total').textContent = 'R$ ' + total.toFixed(2);
+        }
+    </script>
+</head>
+<body>
+
+<div class="container">
+    <div class="header">
+        <h1>[Nome do Evento]</h1>
+        <p>Uma breve descrição sobre o evento, com detalhes interessantes para atrair o público.</p>
+    </div>
+
+    <div class="section">
+        <h2>Detalhes do Evento</h2>
+        <p><strong>Data:</strong> [Data do evento]</p>
+        <p><strong>Horário:</strong> [Hora de início] - [Hora de término]</p>
+        <p><strong>Local:</strong> [Nome do local]</p>
+        <p><strong>Endereço:</strong> [Endereço completo com mapa integrado]</p>
+        <p><strong>Informações adicionais:</strong> Estacionamento, transporte público disponível, etc.</p>
+    </div>
+
+    <div class="section">
+        <h2>Ingressos</h2>
+        <p><strong>Preço do Ingresso:</strong> R$ 100,00 (por ingresso)</p>
+    </div>
+
+    <div class="section">
+        <h2>Seleção de Ingressos</h2>
+        <label for="quantity">Selecione a quantidade de ingressos desejada:</label>
+        <select id="quantity" onchange="updateTotal()">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+        </select>
+    </div>
+
+    <div class="section">
+        <p class="total">Total: <span id="total">R$ 100,00</span></p>
+    </div>
+
+    <div class="section">
+        <a href="#" class="btn">Comprar Agora</a>
+    </div>
+</div>
+
+</body>
+</html>
