@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Evento de Hip Hop</title>
+    <title>Evento de Pagode</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -37,13 +37,6 @@
         .btn:hover {
             background-color: #218838;
         }
-        .btn-back {
-            background-color: #007bff;
-            margin-top: 20px;
-        }
-        .btn-back:hover {
-            background-color: #0056b3;
-        }
     </style>
     <script>
         function updateTotal() {
@@ -52,26 +45,22 @@
             const total = ticketPrice * quantity;
             document.getElementById('total').textContent = 'R$ ' + total.toFixed(2);
         }
-
-        function purchaseTicket() {
-            alert('Compra realizada com sucesso');
-        }
     </script>
 </head>
 <body>
 
 <div class="container">
     <div class="header">
-        <h1>Evento de Hip Hop</h1>
-        <p>Evento de Hip Hop, teremos show de rap, graffiti, break e muito mais. Venha aproveitar conosco.</p>
+        <h1>Evento de Pagode</h1>
+        <p>Evento de Pagode, muito pagode e samba para a galera, cerveja e churrasquinho liberado.</p>
     </div>
 
     <div class="section">
         <h2>Detalhes do Evento</h2>
-        <p><strong>Data:</strong> 25/08/2026</p>
+        <p><strong>Data:</strong> 24/08/2026</p>
         <p><strong>Horário:</strong> 15:00 - 00:00</p>
         <p><strong>Local:</strong> Espaço Lazer</p>
-        <p><strong>Endereço:</strong> Rua dos Eventos, 1009</p>
+        <p><strong>Endereço:</strong> Rua dos eventos, 1009</p>
     </div>
 
     <div class="section">
@@ -96,14 +85,10 @@
     </div>
 
     <div class="section">
-        <a href="#" class="btn" onclick="purchaseTicket()">Comprar Agora</a>
-    </div>
-
-    <div class="section">
-        <a href="paginainicial.html" class="btn btn-back">Voltar à Página Inicial</a>
+        <a href="#" class="btn">Comprar Agora</a>
+        
     </div>
 </div>
 
 </body>
 </html>
-
