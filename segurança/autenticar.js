@@ -32,3 +32,8 @@ export function verificarAutenticacao(requisicao, resposta, executarProximoPasso
         resposta.redirect('/login.html');
      }
 }
+
+export function logout(requisicao, resposta){
+    requisicao.session.autenticado = undefined;
+    resposta.redirect('/login.html');
+}

@@ -1,7 +1,7 @@
 // é preciso usar recursos já prontos que impeçam a reinvençao da roda.
 import express from 'express';
 import autenticar from './segurança/autenticar.js';
-import { verificarAutenticacao } from './segurança/autenticar.js';
+import { verificarAutenticacao, logout } from './segurança/autenticar.js';
 import session from 'express-session';
 
 const host = '0.0.0.0'; // todas as interfaces de rede disponiveis
@@ -30,6 +30,8 @@ app.use(express.static('./publico'));
 app.get('/login',(requisicao, resposta) => {
     resposta.redirect('/login.html');
 });
+
+app.get('/logout', logout)
 
 app.post('/login', autenticar);
 
