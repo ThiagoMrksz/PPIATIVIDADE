@@ -1,46 +1,37 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Evento de Hip Hop</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <style>
         body {
             font-family: Arial, sans-serif;
-            margin: 20px;
-            line-height: 1.6;
+            margin-top: 20px;
         }
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-        }
-        .header {
-            text-align: center;
-            margin-bottom: 20px;
-        }
-        .section {
-            margin-bottom: 20px;
-        }
+
         .total {
             font-weight: bold;
             font-size: 1.2em;
         }
-        .btn {
-            display: inline-block;
-            padding: 10px 20px;
+
+        .btn-custom {
             background-color: #28a745;
             color: white;
-            text-align: center;
-            text-decoration: none;
-            border-radius: 5px;
         }
-        .btn:hover {
+
+        .btn-custom:hover {
             background-color: #218838;
         }
+
         .btn-back {
             background-color: #007bff;
             margin-top: 20px;
+            color: white;
         }
+
         .btn-back:hover {
             background-color: #0056b3;
         }
@@ -58,52 +49,60 @@
         }
     </script>
 </head>
+
 <body>
 
-<div class="container">
-    <div class="header">
-        <h1>Evento de Hip Hop</h1>
-        <p>Evento de Hip Hop, teremos show de rap, graffiti, break e muito mais. Venha aproveitar conosco.</p>
-    </div>
+    <div class="container">
+        <div class="text-center mb-4">
+            <h1>Evento de Hip Hop</h1>
+            <p>Evento de Hip Hop, teremos show de rap, graffiti, break e muito mais. Venha aproveitar conosco.</p>
+        </div>
 
-    <div class="section">
-        <h2>Detalhes do Evento</h2>
-        <p><strong>Data:</strong> 25/08/2026</p>
-        <p><strong>Horário:</strong> 15:00 - 00:00</p>
-        <p><strong>Local:</strong> Espaço Lazer</p>
-        <p><strong>Endereço:</strong> Rua dos Eventos, 1009</p>
-    </div>
+        <div class="card mb-4">
+            <div class="card-body">
+                <h2 class="card-title">Detalhes do Evento</h2>
+                <p><strong>Data:</strong> 25/08/2026</p>
+                <p><strong>Horário:</strong> 15:00 - 00:00</p>
+                <p><strong>Local:</strong> Espaço Lazer</p>
+                <p><strong>Endereço:</strong> Rua dos Eventos, 1009</p>
+            </div>
+        </div>
 
-    <div class="section">
-        <h2>Ingressos</h2>
-        <p><strong>Preço do Ingresso:</strong> R$ 100,00 (por ingresso)</p>
-    </div>
+        <div class="card mb-4">
+            <div class="card-body">
+                <h2 class="card-title">Ingressos</h2>
+                <p><strong>Preço do Ingresso:</strong> R$ 100,00 (por ingresso)</p>
+            </div>
+        </div>
 
-    <div class="section">
-        <h2>Seleção de Ingressos</h2>
-        <label for="quantity">Selecione a quantidade de ingressos desejada:</label>
-        <select id="quantity" onchange="updateTotal()">
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
-        </select>
-    </div>
+        <div class="card mb-4">
+            <div class="card-body">
+                <h2 class="card-title">Seleção de Ingressos</h2>
+                <label for="quantity">Selecione a quantidade de ingressos desejada:</label>
+                <select id="quantity" class="form-control w-25" onchange="updateTotal()">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+            </div>
+        </div>
 
-    <div class="section">
-        <p class="total">Total: <span id="total">R$ 100,00</span></p>
-    </div>
+        <div class="card mb-4">
+            <div class="card-body">
+                <p class="total">Total: <span id="total">R$ 100,00</span></p>
+                <a href="#" class="btn btn-custom" onclick="purchaseTicket()">Comprar Agora</a>
+            </div>
+        </div>
 
-    <div class="section">
-        <a href="#" class="btn" onclick="purchaseTicket()">Comprar Agora</a>
+        <div class="text-center">
+            <a href="paginainicial.html" class="btn btn-back">Voltar à Página Inicial</a>
+        </div>
     </div>
-
-    <div class="section">
-        <a href="paginainicial.html" class="btn btn-back">Voltar à Página Inicial</a>
-    </div>
-</div>
-
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.0.7/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
-</html>
 
+</html>
